@@ -1,0 +1,32 @@
+<html>
+    <body>
+        <canvas id="canvas" width="500" height="300"></canvas>
+        <p id="text" style="font-family:美咲ゴシック第2"></p>
+    <script src="main.js"></script>
+    <style>
+        @font-face {
+            font-family: '美咲ゴシック第2';
+            src: url('misaki_gothic_2nd.ttf') format('truetype');
+        }
+        /* 画面全体を中央揃えにする */
+        body {
+            font-family: '美咲ゴシック第2', sans-serif; /* 美咲ゴシック第二を指定 */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh; /* 画面全体の高さを指定 */
+            margin: 0;
+            font-size: 2vw; /* 画面幅の2%を基準フォントサイズに */
+        }
+        
+        /* テキストのサイズとスタイルを調整 */
+        p {
+            font-size: 2vw; /* bodyの基準フォントサイズに対して1倍 */
+            line-height: 1em; /* 行間も文字サイズに比例 */
+            letter-spacing: 0em; /* 文字間隔を固定 */
+            padding: 0; /* 内部余白を0に設定 */
+            margin: 0;
+        }
+    </style>
+    </body>
+</html>
