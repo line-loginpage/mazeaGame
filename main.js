@@ -36,6 +36,17 @@ let down = document.getElementById('down');
 let left = document.getElementById('left');
 let right = document.getElementById('right');
 
+// 矢印キーを押すイベントを発生させる関数
+function triggerKeyEvent(key) {
+    let event = new KeyboardEvent("keydown", { key: key, code: key });
+    document.dispatchEvent(event);
+}
+
+// ボタンにイベントを追加
+document.getElementById("up").addEventListener("click", () => triggerKeyEvent("ArrowUp"));
+document.getElementById("left").addEventListener("click", () => triggerKeyEvent("ArrowLeft"));
+document.getElementById("right").addEventListener("click", () => triggerKeyEvent("ArrowRight"));
+
 document.addEventListener('keydown', function (event) {
     if(!game){return}
     switch (event.key) {
